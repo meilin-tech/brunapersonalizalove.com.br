@@ -1,0 +1,34 @@
+# Robots.txt para Bruna Personaliza Love
+# Permite que todos os buscadores rastreiem o site
+
+User-agent: *
+Allow: /
+Disallow: /admin/
+Disallow: /private/
+Disallow: /temp/
+
+# Especificar localização do sitemap
+Sitemap: https://www.brunapersonalizalove.com.br/sitemap.xml
+
+# Tempo de rastreamento preferido
+Crawl-delay: 1
+
+# Google específico
+User-agent: Googlebot
+Allow: /
+Crawl-delay: 0
+
+# Bing específico
+User-agent: Bingbot
+Allow: /
+Crawl-delay: 1
+
+# Bloquear bots maliciosos
+User-agent: MJ12bot
+Disallow: /
+
+User-agent: AhrefsBot
+Disallow: /
+
+User-agent: SemrushBot
+Disallow: /
