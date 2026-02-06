@@ -175,7 +175,7 @@ window.addEventListener('scroll', function() {
 
 function updateWhatsAppLinks() {
     // Substitua pelo número real do WhatsApp
-    const whatsappNumber = '5511999999999'; // Formato: 55 + DDD + número
+    const whatsappNumber = '5518997274433'; // Formato: 55 + DDD + número
     const message = 'Olá Bruna! Gostaria de solicitar um orçamento para meu projeto personalizado.';
     const encodedMessage = encodeURIComponent(message);
     const whatsappUrl = `https://wa.me/${whatsappNumber}?text=${encodedMessage}`;
@@ -368,7 +368,7 @@ document.addEventListener('DOMContentLoaded', function() {
     instagramStories.forEach((story, index) => {
         story.addEventListener('click', function() {
             // Redirecionar para Instagram ao clicar em qualquer história
-            window.open('https://www.instagram.com/brunapersonalizalove', '_blank');
+            window.open('https://www.instagram.com/bruna_personalizalove', '_blank');
         });
 
         // Adicionar animação de hover

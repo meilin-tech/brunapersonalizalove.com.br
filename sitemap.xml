@@ -6,7 +6,7 @@
     <!-- Página inicial -->
     <url>
         <loc>https://www.brunapersonalizalove.com.br/</loc>
-        <lastmod>2024-02-02</lastmod>
+        <lastmod>2026-02-02</lastmod>
         <changefreq>weekly</changefreq>
         <priority>1.0</priority>
         <image:image>
@@ -19,7 +19,7 @@
     <!-- Seção Sobre -->
     <url>
         <loc>https://www.brunapersonalizalove.com.br/#about</loc>
-        <lastmod>2024-02-02</lastmod>
+        <lastmod>2026-02-02</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.8</priority>
         <mobile:mobile/>
@@ -28,7 +28,7 @@
     <!-- Seção Portfólio -->
     <url>
         <loc>https://www.brunapersonalizalove.com.br/#portfolio</loc>
-        <lastmod>2024-02-02</lastmod>
+        <lastmod>2026-02-02</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.9</priority>
         <mobile:mobile/>
@@ -37,7 +37,7 @@
     <!-- Seção Contato -->
     <url>
         <loc>https://www.brunapersonalizalove.com.br/#contact</loc>
-        <lastmod>2024-02-02</lastmod>
+        <lastmod>2026-02-02</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.7</priority>
         <mobile:mobile/>
