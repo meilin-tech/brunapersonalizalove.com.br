@@ -368,7 +368,7 @@ document.addEventListener('DOMContentLoaded', function() {
     instagramStories.forEach((story, index) => {
         story.addEventListener('click', function() {
             // Redirecionar para Instagram ao clicar em qualquer história
-            window.open('https://www.instagram.com/bruna_personalizalove', '_blank');
+            window.open('https://www.instagram.com/bruna_personalizalove/', '_blank');
         });
 
         // Adicionar animação de hover
