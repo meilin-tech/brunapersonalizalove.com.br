@@ -304,3 +304,158 @@ console.log('Bruna Personaliza Love - Site carregado com sucesso! 💕');
 if ('web-vital' in window) {
     console.log('Monitorando Core Web Vitals...');
 }
+
+
+// ===========================
+// FILTROS DE PORTFÓLIO
+// ===========================
+
+document.addEventListener('DOMContentLoaded', function() {
+    const filterBtns = document.querySelectorAll('.filter-btn');
+    const portfolioItems = document.querySelectorAll('.portfolio-item');
+
+    filterBtns.forEach(btn => {
+        btn.addEventListener('click', function() {
+            const filterValue = this.getAttribute('data-filter');
+
+            // Remover classe active de todos os botões
+            filterBtns.forEach(b => b.classList.remove('active'));
+            
+            // Adicionar classe active ao botão clicado
+            this.classList.add('active');
+
+            // Filtrar itens
+            portfolioItems.forEach(item => {
+                const category = item.getAttribute('data-category');
+                
+                if (filterValue === 'all' || category === filterValue) {
+                    item.style.display = 'block';
+                    item.style.animation = 'slideInUp 0.6s ease-out forwards';
+                } else {
+                    item.style.display = 'none';
+                }
+            });
+        });
+    });
+});
+
+// ===========================
+// ANIMAÇÃO DE ENTRADA PARA ITENS FILTRADOS
+// ===========================
+
+const style = document.createElement('style');
+style.textContent = `
+    @keyframes slideInUp {
+        from {
+            opacity: 0;
+            transform: translateY(20px);
+        }
+        to {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+`;
+document.head.appendChild(style);
+
+// ===========================
+// INTERATIVIDADE INSTAGRAM
+// ===========================
+
+document.addEventListener('DOMContentLoaded', function() {
+    const instagramStories = document.querySelectorAll('.instagram-story');
+    
+    instagramStories.forEach((story, index) => {
+        story.addEventListener('click', function() {
+            // Redirecionar para Instagram ao clicar em qualquer história
+            window.open('https://www.instagram.com/brunapersonalizalove', '_blank');
+        });
+
+        // Adicionar animação de hover
+        story.addEventListener('mouseenter', function() {
+            this.style.transform = 'scale(1.1) rotate(5deg)';
+        });
+
+        story.addEventListener('mouseleave', function() {
+            this.style.transform = 'scale(1) rotate(0deg)';
+        });
+    });
+
+    // Animar o telefone
+    const instagramPhone = document.querySelector('.instagram-phone');
+    if (instagramPhone) {
+        instagramPhone.addEventListener('mouseenter', function() {
+            this.style.transform = 'translateY(-10px)';
+            this.style.boxShadow = '0 30px 80px rgba(0, 0, 0, 0.4)';
+        });
+
+        instagramPhone.addEventListener('mouseleave', function() {
+            this.style.transform = 'translateY(0)';
+            this.style.boxShadow = '0 20px 60px rgba(0, 0, 0, 0.3)';
+        });
+    }
+});
+
+// ===========================
+// RASTREAMENTO DE CLIQUES INSTAGRAM
+// ===========================
+
+document.addEventListener('DOMContentLoaded', function() {
+    const instagramButton = document.querySelector('.instagram-button');
+    
+    if (instagramButton) {
+        instagramButton.addEventListener('click', function() {
+            console.log('Clique no botão Instagram - Redirecionando para @brunapersonalizalove');
+        });
+    }
+});
+
+// ===========================
+// LAZY LOADING APRIMORADO
+// ===========================
+
+if ('IntersectionObserver' in window) {
+    const portfolioPhotos = document.querySelectorAll('.portfolio-photo');
+    
+    const photoObserver = new IntersectionObserver((entries, observer) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                const img = entry.target;
+                
+                // Se a imagem não carregou ainda, carregar
+                if (img.dataset.src && !img.src) {
+                    img.src = img.dataset.src;
+                }
+                
+                img.addEventListener('load', function() {
+                    this.style.animation = 'fadeIn 0.5s ease-in';
+                });
+                
+                observer.unobserve(img);
+            }
+        });
+    }, {
+        rootMargin: '50px'
+    });
+
+    portfolioPhotos.forEach(photo => photoObserver.observe(photo));
+}
+
+// ===========================
+// ANIMAÇÃO DE FADE IN
+// ===========================
+
+const fadeInStyle = document.createElement('style');
+fadeInStyle.textContent = `
+    @keyframes fadeIn {
+        from {
+            opacity: 0;
+        }
+        to {
+            opacity: 1;
+        }
+    }
+`;
+document.head.appendChild(fadeInStyle);
+
+console.log('Portfólio e Instagram - Funcionalidades ativadas! 📸');

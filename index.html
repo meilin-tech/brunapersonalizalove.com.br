@@ -19,35 +19,27 @@
     <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
     <meta name="googlebot" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
     
-    <!-- Canonical URL (importante para evitar conteúdo duplicado) -->
+    <!-- Canonical URL -->
     <link rel="canonical" href="https://www.brunapersonalizalove.com.br/">
     
-    <!-- Open Graph Tags (para compartilhamento em redes sociais) -->
+    <!-- Open Graph Tags -->
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://www.brunapersonalizalove.com.br/">
     <meta property="og:title" content="Bruna Personaliza Love | Papelaria Personalizada Premium">
-    <meta property="og:description" content="Descubra papelaria personalizada de qualidade premium. Canecas, cadernos, almofadas e muito mais. Personalize seus presentes com a Bruna Personaliza Love.">
+    <meta property="og:description" content="Descubra papelaria personalizada de qualidade premium. Canecas, cadernos, almofadas e muito mais.">
     <meta property="og:image" content="https://www.brunapersonalizalove.com.br/logo.png">
-    <meta property="og:image:width" content="1200">
-    <meta property="og:image:height" content="630">
     <meta property="og:locale" content="pt_BR">
     
     <!-- Twitter Card Tags -->
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="Bruna Personaliza Love | Papelaria Personalizada Premium">
-    <meta name="twitter:description" content="Descubra papelaria personalizada de qualidade premium. Canecas, cadernos, almofadas e muito mais.">
+    <meta name="twitter:description" content="Descubra papelaria personalizada de qualidade premium.">
     <meta name="twitter:image" content="https://www.brunapersonalizalove.com.br/logo.png">
     
     <!-- Tema de Cor -->
     <meta name="theme-color" content="#d4a5a5">
     
-    <!-- Verificação do Google Search Console -->
-    <meta name="google-site-verification" content="ADICIONE_AQUI_SEU_CODIGO_DE_VERIFICACAO">
-    
-    <!-- Verificação do Bing Webmaster Tools -->
-    <meta name="msvalidate.01" content="ADICIONE_AQUI_SEU_CODIGO_DE_VERIFICACAO">
-    
-    <!-- Preconnect e DNS Prefetch para Performance -->
+    <!-- Preconnect e DNS Prefetch -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://cdnjs.cloudflare.com">
     <link rel="dns-prefetch" href="https://wa.me">
@@ -56,19 +48,21 @@
     <link rel="icon" type="image/png" href="logo.png">
     <link rel="apple-touch-icon" href="logo.png">
     
+    <!-- Web App Manifest (PWA) -->
+    <link rel="manifest" href="manifest.json">
+    
     <!-- Stylesheet -->
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     
-    <!-- Preload de recursos críticos -->
-    <link rel="preload" href="styles.css" as="style">
-    <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" as="style">
+    <!-- Sitemap reference -->
+    <link rel="sitemap" type="application/xml" href="/sitemap.xml">
 </head>
 <body>
-    <!-- Skip to main content (acessibilidade) -->
+    <!-- Skip to main content -->
     <a href="#main-content" class="skip-to-main">Pular para conteúdo principal</a>
 
-    <!-- Navegação com ARIA labels -->
+    <!-- Navegação -->
     <nav class="navbar" role="navigation" aria-label="Navegação principal">
         <div class="nav-container">
             <div class="logo-container">
@@ -80,6 +74,7 @@
                 <li><a href="#home" class="nav-link">Início</a></li>
                 <li><a href="#about" class="nav-link">Sobre</a></li>
                 <li><a href="#portfolio" class="nav-link">Portfólio</a></li>
+                <li><a href="#instagram" class="nav-link">Instagram</a></li>
                 <li><a href="#contact" class="nav-link contact-btn">Orçamento</a></li>
             </ul>
             <div class="hamburger" aria-label="Menu" aria-expanded="false">
@@ -138,59 +133,161 @@
             </div>
         </section>
 
-        <!-- Portfólio -->
+        <!-- Portfólio com Fotos -->
         <section id="portfolio" class="portfolio" aria-label="Portfólio de produtos">
             <h2 class="section-title">Nossos Produtos</h2>
             <p class="section-subtitle">Conheça algumas das nossas criações especiais</p>
             
+            <!-- Filtros de Categoria -->
+            <div class="portfolio-filters">
+                <button class="filter-btn active" data-filter="all">Todos</button>
+                <button class="filter-btn" data-filter="canecas">Canecas</button>
+                <button class="filter-btn" data-filter="cadernos">Cadernos</button>
+                <button class="filter-btn" data-filter="quadros">Quadros</button>
+                <button class="filter-btn" data-filter="almofadas">Almofadas</button>
+                <button class="filter-btn" data-filter="caixas">Caixas</button>
+            </div>
+            
             <div class="portfolio-grid">
-                <article class="portfolio-item" itemscope itemtype="https://schema.org/Product">
-                    <div class="portfolio-image" style="background: linear-gradient(135deg, #f5d7e3 0%, #e8b4d4 100%);">
-                        <i class="fas fa-mug-hot" aria-hidden="true"></i>
+                <!-- CANECAS -->
+                <article class="portfolio-item" data-category="canecas" itemscope itemtype="https://schema.org/Product">
+                    <div class="portfolio-image">
+                        <img src="img/logo.png" alt="Caneca Personalizada 1" class="portfolio-photo" loading="lazy">
+                        <!--<div class="portfolio-overlay">
+                            <i class="fas fa-mug-hot" aria-hidden="true"></i>
+                        </div>-->
                     </div>
                     <h3 itemprop="name">Canecas Personalizadas</h3>
                     <p itemprop="description">Canecas únicas com suas fotos, nomes e mensagens especiais</p>
                 </article>
 
-                <article class="portfolio-item" itemscope itemtype="https://schema.org/Product">
-                    <div class="portfolio-image" style="background: linear-gradient(135deg, #ffd4a3 0%, #ffb88c 100%);">
-                        <i class="fas fa-book" aria-hidden="true"></i>
+                <article class="portfolio-item" data-category="canecas" itemscope itemtype="https://schema.org/Product">
+                    <div class="portfolio-image">
+                        <img src="images/caneca-2.jpg" alt="Caneca Personalizada 2" class="portfolio-photo" loading="lazy">
+                        <div class="portfolio-overlay">
+                            <i class="fas fa-mug-hot" aria-hidden="true"></i>
+                        </div>
+                    </div>
+                    <h3 itemprop="name">Canecas Premium</h3>
+                    <p itemprop="description">Canecas de qualidade premium com acabamento perfeito</p>
+                </article>
+
+                <!-- CADERNOS -->
+                <article class="portfolio-item" data-category="cadernos" itemscope itemtype="https://schema.org/Product">
+                    <div class="portfolio-image">
+                        <img src="images/caderno-1.jpg" alt="Caderno Personalizado 1" class="portfolio-photo" loading="lazy">
+                        <div class="portfolio-overlay">
+                            <i class="fas fa-book" aria-hidden="true"></i>
+                        </div>
                     </div>
                     <h3 itemprop="name">Cadernos Personalizados</h3>
                     <p itemprop="description">Cadernos elegantes com design exclusivo para suas anotações</p>
                 </article>
 
-                <article class="portfolio-item" itemscope itemtype="https://schema.org/Product">
-                    <div class="portfolio-image" style="background: linear-gradient(135deg, #c8e6c9 0%, #a5d6a7 100%);">
-                        <i class="fas fa-image" aria-hidden="true"></i>
+                <article class="portfolio-item" data-category="cadernos" itemscope itemtype="https://schema.org/Product">
+                    <div class="portfolio-image">
+                        <img src="images/caderno-2.jpg" alt="Caderno Personalizado 2" class="portfolio-photo" loading="lazy">
+                        <div class="portfolio-overlay">
+                            <i class="fas fa-book" aria-hidden="true"></i>
+                        </div>
+                    </div>
+                    <h3 itemprop="name">Cadernos de Luxo</h3>
+                    <p itemprop="description">Cadernos com capa dura e acabamento premium</p>
+                </article>
+
+                <!-- QUADROS -->
+                <article class="portfolio-item" data-category="quadros" itemscope itemtype="https://schema.org/Product">
+                    <div class="portfolio-image">
+                        <img src="images/quadro-1.jpg" alt="Quadro Decorativo 1" class="portfolio-photo" loading="lazy">
+                        <div class="portfolio-overlay">
+                            <i class="fas fa-image" aria-hidden="true"></i>
+                        </div>
                     </div>
                     <h3 itemprop="name">Quadros Decorativos</h3>
                     <p itemprop="description">Quadros personalizados que transformam seus ambientes</p>
                 </article>
 
-                <article class="portfolio-item" itemscope itemtype="https://schema.org/Product">
-                    <div class="portfolio-image" style="background: linear-gradient(135deg, #bbdefb 0%, #90caf9 100%);">
-                        <i class="fas fa-tag" aria-hidden="true"></i>
+                <article class="portfolio-item" data-category="quadros" itemscope itemtype="https://schema.org/Product">
+                    <div class="portfolio-image">
+                        <img src="images/quadro-2.jpg" alt="Quadro Decorativo 2" class="portfolio-photo" loading="lazy">
+                        <div class="portfolio-overlay">
+                            <i class="fas fa-image" aria-hidden="true"></i>
+                        </div>
                     </div>
-                    <h3 itemprop="name">Etiquetas e Adesivos</h3>
-                    <p itemprop="description">Etiquetas criativas para seus presentes e produtos</p>
+                    <h3 itemprop="name">Quadros com Moldura</h3>
+                    <p itemprop="description">Quadros com moldura elegante e acabamento profissional</p>
                 </article>
 
-                <article class="portfolio-item" itemscope itemtype="https://schema.org/Product">
-                    <div class="portfolio-image" style="background: linear-gradient(135deg, #f8bbd0 0%, #f48fb1 100%);">
-                        <i class="fas fa-heart" aria-hidden="true"></i>
+                <!-- ALMOFADAS -->
+                <article class="portfolio-item" data-category="almofadas" itemscope itemtype="https://schema.org/Product">
+                    <div class="portfolio-image">
+                        <img src="images/almofada-1.jpg" alt="Almofada Personalizada 1" class="portfolio-photo" loading="lazy">
+                        <div class="portfolio-overlay">
+                            <i class="fas fa-heart" aria-hidden="true"></i>
+                        </div>
                     </div>
                     <h3 itemprop="name">Almofadas Personalizadas</h3>
                     <p itemprop="description">Almofadas confortáveis com suas fotos e mensagens</p>
                 </article>
 
-                <article class="portfolio-item" itemscope itemtype="https://schema.org/Product">
-                    <div class="portfolio-image" style="background: linear-gradient(135deg, #ffe0b2 0%, #ffcc80 100%);">
-                        <i class="fas fa-box" aria-hidden="true"></i>
+                <article class="portfolio-item" data-category="almofadas" itemscope itemtype="https://schema.org/Product">
+                    <div class="portfolio-image">
+                        <img src="images/almofada-2.jpg" alt="Almofada Personalizada 2" class="portfolio-photo" loading="lazy">
+                        <div class="portfolio-overlay">
+                            <i class="fas fa-heart" aria-hidden="true"></i>
+                        </div>
+                    </div>
+                    <h3 itemprop="name">Almofadas de Luxo</h3>
+                    <p itemprop="description">Almofadas premium com tecido de alta qualidade</p>
+                </article>
+
+                <!-- CAIXAS -->
+                <article class="portfolio-item" data-category="caixas" itemscope itemtype="https://schema.org/Product">
+                    <div class="portfolio-image">
+                        <img src="images/caixa-1.jpg" alt="Caixa Personalizada 1" class="portfolio-photo" loading="lazy">
+                        <div class="portfolio-overlay">
+                            <i class="fas fa-box" aria-hidden="true"></i>
+                        </div>
                     </div>
                     <h3 itemprop="name">Caixas Personalizadas</h3>
                     <p itemprop="description">Caixas especiais para embalar seus presentes com estilo</p>
                 </article>
+
+                <article class="portfolio-item" data-category="caixas" itemscope itemtype="https://schema.org/Product">
+                    <div class="portfolio-image">
+                        <img src="images/caixa-2.jpg" alt="Caixa Personalizada 2" class="portfolio-photo" loading="lazy">
+                        <div class="portfolio-overlay">
+                            <i class="fas fa-box" aria-hidden="true"></i>
+                        </div>
+                    </div>
+                    <h3 itemprop="name">Caixas de Presente</h3>
+                    <p itemprop="description">Caixas elegantes com acabamento impecável</p>
+                </article>
+            </div>
+        </section>
+
+        <!-- Instagram Section -->
+        <section id="instagram" class="instagram-section" aria-label="Siga-nos no Instagram">
+            <div class="instagram-container">
+                <div class="instagram-content">
+                    <h2 class="section-title">Siga-nos no Instagram</h2>
+                    <p class="instagram-subtitle">Acompanhe as criações mais recentes e se inspire</p>
+                    <p class="instagram-description">No Instagram você encontra as fotos mais lindas dos nossos produtos, dicas de personalização e histórias dos clientes felizes. Venha fazer parte dessa comunidade criativa!</p>
+                    <a href="https://www.instagram.com/brunapersonalizalove" target="_blank" rel="noopener noreferrer" class="instagram-button" aria-label="Seguir no Instagram">
+                        <i class="fab fa-instagram" aria-hidden="true"></i> Seguir @brunapersonalizalove
+                    </a>
+                </div>
+                <div class="instagram-visual">
+                    <div class="instagram-phone">
+                        <div class="instagram-phone-notch"></div>
+                        <div class="instagram-feed">
+                            <div class="instagram-story">📸</div>
+                            <div class="instagram-story">💝</div>
+                            <div class="instagram-story">✨</div>
+                            <div class="instagram-story">🎁</div>
+                        </div>
+                    </div>
+                </div>
             </div>
         </section>
 
@@ -217,152 +314,24 @@
         <i class="fab fa-whatsapp" aria-hidden="true"></i>
     </a>
 
-    <!-- JSON-LD Structured Data (Schema.org) -->
+    <!-- JSON-LD Structured Data -->
     <script type="application/ld+json">
     {
         "@context": "https://schema.org",
         "@type": "LocalBusiness",
         "name": "Bruna Personaliza Love",
-        "description": "Papelaria personalizada de qualidade premium. Canecas, cadernos, almofadas e muito mais.",
+        "description": "Papelaria personalizada de qualidade premium.",
         "url": "https://www.brunapersonalizalove.com.br",
         "logo": "https://www.brunapersonalizalove.com.br/logo.png",
-        "image": "https://www.brunapersonalizalove.com.br/logo.png",
         "telephone": "+55 11 99999-9999",
-        "email": "contato@brunapersonalizalove.com.br",
-        "address": {
-            "@type": "PostalAddress",
-            "streetAddress": "Rua Exemplo, 123",
-            "addressLocality": "São Paulo",
-            "addressRegion": "SP",
-            "postalCode": "01234-567",
-            "addressCountry": "BR"
-        },
         "areaServed": "BR",
         "priceRange": "$$",
-        "sameAs": [
-            "https://www.instagram.com/brunapersonalizalove",
-            "https://www.facebook.com/brunapersonalizalove",
-            "https://wa.me/5511999999999"
-        ],
-        "contactPoint": {
-            "@type": "ContactPoint",
-            "contactType": "Sales",
-            "telephone": "+55 11 99999-9999",
-            "email": "contato@brunapersonalizalove.com.br"
-        },
-        "openingHoursSpecification": {
-            "@type": "OpeningHoursSpecification",
-            "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
-            "opens": "09:00",
-            "closes": "18:00"
-        }
-    }
-    </script>
-
-    <!-- JSON-LD para Produtos -->
-    <script type="application/ld+json">
-    {
-        "@context": "https://schema.org",
-        "@type": "ItemList",
-        "itemListElement": [
-            {
-                "@type": "ListItem",
-                "position": 1,
-                "name": "Canecas Personalizadas",
-                "description": "Canecas únicas com suas fotos, nomes e mensagens especiais",
-                "url": "https://www.brunapersonalizalove.com.br/#portfolio"
-            },
-            {
-                "@type": "ListItem",
-                "position": 2,
-                "name": "Cadernos Personalizados",
-                "description": "Cadernos elegantes com design exclusivo para suas anotações",
-                "url": "https://www.brunapersonalizalove.com.br/#portfolio"
-            },
-            {
-                "@type": "ListItem",
-                "position": 3,
-                "name": "Quadros Decorativos",
-                "description": "Quadros personalizados que transformam seus ambientes",
-                "url": "https://www.brunapersonalizalove.com.br/#portfolio"
-            },
-            {
-                "@type": "ListItem",
-                "position": 4,
-                "name": "Etiquetas e Adesivos",
-                "description": "Etiquetas criativas para seus presentes e produtos",
-                "url": "https://www.brunapersonalizalove.com.br/#portfolio"
-            },
-            {
-                "@type": "ListItem",
-                "position": 5,
-                "name": "Almofadas Personalizadas",
-                "description": "Almofadas confortáveis com suas fotos e mensagens",
-                "url": "https://www.brunapersonalizalove.com.br/#portfolio"
-            },
-            {
-                "@type": "ListItem",
-                "position": 6,
-                "name": "Caixas Personalizadas",
-                "description": "Caixas especiais para embalar seus presentes com estilo",
-                "url": "https://www.brunapersonalizalove.com.br/#portfolio"
-            }
-        ]
-    }
-    </script>
-
-    <!-- JSON-LD para Breadcrumb -->
-    <script type="application/ld+json">
-    {
-        "@context": "https://schema.org",
-        "@type": "BreadcrumbList",
-        "itemListElement": [
-            {
-                "@type": "ListItem",
-                "position": 1,
-                "name": "Início",
-                "item": "https://www.brunapersonalizalove.com.br/#home"
-            },
-            {
-                "@type": "ListItem",
-                "position": 2,
-                "name": "Sobre",
-                "item": "https://www.brunapersonalizalove.com.br/#about"
-            },
-            {
-                "@type": "ListItem",
-                "position": 3,
-                "name": "Portfólio",
-                "item": "https://www.brunapersonalizalove.com.br/#portfolio"
-            }
-        ]
-    }
-    </script>
-
-    <!-- JSON-LD para Organização -->
-    <script type="application/ld+json">
-    {
-        "@context": "https://schema.org",
-        "@type": "Organization",
-        "name": "Bruna Personaliza Love",
-        "url": "https://www.brunapersonalizalove.com.br",
-        "logo": "https://www.brunapersonalizalove.com.br/logo.png",
-        "description": "Papelaria personalizada de qualidade premium",
         "sameAs": [
             "https://www.instagram.com/brunapersonalizalove",
             "https://www.facebook.com/brunapersonalizalove"
         ]
     }
     </script>
-
-    <!-- Web App Manifest (PWA) -->
-    <link rel="manifest" href="manifest.json">
-    
-    <!-- Sitemap reference -->
-    <link rel="sitemap" type="application/xml" href="/sitemap.xml">
-
-    <!-- RSS Feed (opcional) -->
-    <link rel="alternate" type="application/rss+xml" title="Bruna Personaliza Love" href="/feed.xml">
 
     <script src="script.js" defer></script>
 </body>
